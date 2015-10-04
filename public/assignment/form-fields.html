@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  	 	 <link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="row top-buffer">
+			<div class="container">
+			<div class="container border">
+				<h2>Form Maker</h2>	
+					<ul class="pull-right right ">
+						<li><a href="#">Username</a></li> |
+						<li><a href="#">Logout</a></li>
+					</ul>
+			</div>
+		</div>
+	
+		<div class="container">
+			<div class="col-lg-3 border left-nav">
+				<div class="row footer">
+					<ul>
+						<li class="border-bottom"><a href="home.html">&nbsp;Home</a></li>
+						<li class="border-bottom"><a href="profile.html">&nbsp;Profile</a></li>
+						<li class="border-bottom"><a href="admin.html">&nbsp;Admin</a></li>
+						<li class="border-bottom"><a href="forms.html">&nbsp;Forms</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<h2>Forms : Registration Form</h2>
+					<ul class="nav nav-tabs">
+						<li role="presentation"><a href="forms.html">Forms</a></li>
+						<li role="presentation" class="active"><a href="#">Fields</a></li>
+					</ul>
+			
+		
+					<form role="form-inline">
+						<div class="form-group">
+							<label for="firstname">First name:</label>
+							<input type="email" class="form-control" id="email" class="mytext" placeholder="Enter email"/>
+						</div>
+						
+						<div class="form-group">
+							<label for="lastname">Last Name:</label>
+							<input type="password" class="form-control" id="pwd" class="mytext" placeholder="Enter password"/>
+						</div>
+						
+						<div class="dropdown">
+							<label for="dateofbirth">Date of Birth:</label>
+							<input type="date"class="form-control" id="dateofbirth"/>
+						</div>
+					
+						 <div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Gender:
+							<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Male</a></li>
+									<li><a href="#">Female</a></li>
+								</ul>
+						</div>				
+				
+						<label for="roles">Roles:</label>
+							<div class="checkbox">
+								<label><input type="checkbox" checked value="" >Admin</label>
+							</div>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" value=""/>Student</label>
+							</div>
+							
+							<div class="checkbox disabled">
+								<label><input type="checkbox" checked value=""/>User</label>
+							</div>
+				
+						<label for="licenseagreement">License Agreement:</label>
+						
+							<div class="radio">
+								<label><input type="radio" checked name="optradio">Yes</label>
+							</div>
+							
+							<div class="radio">
+								<label><input type="radio" name="optradio">No</label>
+							</div>
+					
+							<div class="dropdown">
+								<label for="addnewfield">Add New Field:</label>
+									<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Single Line Text
+									<span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Single Line Text</a></li>
+											<li><a href="#">Date</a></li>
+											<li><a href="#">Dropdown</a></li>
+											<li><a href="#">Checkboxes</a></li>
+											<li><a href="#">Radio buttons</a></li>
+											<li><a href="#">Paragraph Text Field</a></li>
+										</ul>
+							</div>
+						</form>
+			</div>
+		</div>
+	</body>
+</html>
+	
