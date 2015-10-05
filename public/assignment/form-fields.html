@@ -3,29 +3,29 @@
 
 	<head>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  	 	 <link rel="stylesheet" href="style.css">
+  	 	 <link rel="stylesheet" href="styles.css">
 	</head>
 
 	<body>
 		<div class="row top-buffer">
 			<div class="container">
-			<div class="container border">
-				<h2>Form Maker</h2>	
-					<ul class="pull-right right ">
-						<li><a href="#">Username</a></li> |
-						<li><a href="#">Logout</a></li>
-					</ul>
+				<div class="container border">
+					<h2>Form Maker</h2>	
+						<ul class="pull-right right ">
+							<li><a href="#">Username</a></li> |
+							<li><a href="#">Logout</a></li>
+						</ul>
+				</div>
 			</div>
-		</div>
 	
 		<div class="container">
-			<div class="col-lg-3 border left-nav">
+			<div class="col-lg-3 border left-nav" style="height:700px">
 				<div class="row footer">
 					<ul>
 						<li class="border-bottom"><a href="home.html">&nbsp;Home</a></li>
 						<li class="border-bottom"><a href="profile.html">&nbsp;Profile</a></li>
 						<li class="border-bottom"><a href="admin.html">&nbsp;Admin</a></li>
-						<li class="border-bottom"><a href="forms.html">&nbsp;Forms</a></li>
+						<li class="border-bottom active"><a href="forms.html">&nbsp;Forms</a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,37 +35,84 @@
 						<li role="presentation"><a href="forms.html">Forms</a></li>
 						<li role="presentation" class="active"><a href="#">Fields</a></li>
 					</ul>
-			
 		
 					<form role="form-inline">
-						<div class="form-group">
-							<label for="firstname">First name:</label>
-							<input type="email" class="form-control" id="email" class="mytext" placeholder="Enter email"/>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="form-group">
+									<label for="firstname">First name:</label>
+									<input type="email" class="form-control" id="email" class="mytext" placeholder="Enter email"/>
+								</div>
+							</div>
+								<div class="col-lg-4 col-lg-offset-4">
+									<br/>
+								<ul class="right">
+									<a href="#"><li><span class="glyphicon glyphicon-pencil icon-font"></span></li></a>
+									<a href="#"><li><span class="glyphicon glyphicon-plus icon-font"></span></li></a>
+									<a href="#"><li><span class="glyphicon glyphicon-remove icon-font"></span></li></a>
+									<a href="#"><li><span class="glyphicon glyphicon-align-justify icon-font"></span></li></a>
+								</ul>
+								</div>
 						</div>
 						
-						<div class="form-group">
-							<label for="lastname">Last Name:</label>
-							<input type="password" class="form-control" id="pwd" class="mytext" placeholder="Enter password"/>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="form-group">
+									
+									<label for="lastname">Last Name:</label>
+									<input type="password" class="form-control" id="pwd" class="mytext" placeholder="Enter password"/>
+								</div>
+							</div>
+							<div class="col-lg-4 col-lg-offset-4">
+								<br/>
+							<ul class="right">
+								<a href="#"><li><span class="glyphicon glyphicon-pencil icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-plus icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-remove icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-align-justify icon-font"></span></li></a>
+							</ul>
+							</div>
 						</div>
 						
-						<div class="dropdown">
-							<label for="dateofbirth">Date of Birth:</label>
-							<input type="date"class="form-control" id="dateofbirth"/>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="form-group">
+									<label for="dateofbirth">Date of Birth:</label>
+									<input type="date"class="form-control" id="dateofbirth"/>
+								</div>
+							</div>
+							<div class="col-lg-4 col-lg-offset-4">
+								<br/>
+							<ul class="right">
+								<a href="#"><li><span class="glyphicon glyphicon-pencil icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-plus icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-remove icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-align-justify icon-font"></span></li></a>
+							</ul>
+							</div>
 						</div>
 						
 						
-						<div class="dropup">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropup
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="form-group">
+									<label for="gender">Gender:</label>
+									<select class="form-control" id="gender">
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-4 col-lg-offset-4">
+								<br/>
+							<ul class="right">
+								<a href="#"><li><span class="glyphicon glyphicon-pencil icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-plus icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-remove icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-align-justify icon-font"></span></li></a>
+							</ul>
+							</div>
+						</div>
 						
 									
 				
@@ -92,20 +139,32 @@
 								<label><input type="radio" name="optradio">No</label>
 							</div>
 					
-							<div class="dropdown">
-								<label for="addnewfield">Add New Field:</label>
-									<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Single Line Text
-									<span class="caret"></span></button>
-										<ul class="dropdown-menu">
-											<li><a href="#">Single Line Text</a></li>
-											<li><a href="#">Date</a></li>
-											<li><a href="#">Dropdown</a></li>
-											<li><a href="#">Checkboxes</a></li>
-											<li><a href="#">Radio buttons</a></li>
-											<li><a href="#">Paragraph Text Field</a></li>
-										</ul>
+					<hr class="bold"/>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="form-group">
+										<label for="newfield">Add new Field:</label>
+											<select class="form-control" id="newfield">
+												<option value="Single Line Text">Single Line Text</option>
+												<option value="Date">Date</option>
+												<option value="Dropdown">Dropdown</option>
+												<option value="Checkboxes">Checkboxes</option>
+												<option value="Radio buttons">Radio buttons</option>
+												<option value="Paragraph Text Field">Paragraph Text Field</option>
+											</select>
 							</div>
-						</form>
+						</div>
+						<div class="col-lg-4 col-lg-offset-4">
+								<br/>
+							<ul class="right">
+								<a href="#"><li><span class="glyphicon glyphicon-pencil icon-font hide-icon"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-plus icon-font"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-remove icon-font hide-icon"></span></li></a>
+								<a href="#"><li><span class="glyphicon glyphicon-align-justify icon-font hide-icon"></span></li></a>
+							</ul>
+							</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>
