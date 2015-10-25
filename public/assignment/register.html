@@ -1,80 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-	<head>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-	</head>
-  
-  
+    <title>Form Maker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
   <body>
-      <div class="row top-buffer">
-        <div class="container">
-          <div class="container border">
-            <h2>Form Maker</h2>	
-              <ul class="pull-right right ">
-                <li>Register</li> |
-                <li><a href="login.html">Login</a></li> |
-                <li><a href="#">Username</a></li> |
-                <li><a href="#">Logout</a></li>
-              </ul>
-          </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+           <a class="navbar-brand" href="#">Form Maker</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="register.html">Register<span class="sr-only">(current)</span></a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Username</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
         </div>
       </div>
-	
-	 <div class="container">
-          <div class="col-lg-3 border left-nav">
-            <div class="row footer">
-              <ul>
-                <li class="border-bottom"><a href="home.html">&nbsp;Home</a></li>
-                <li class="border-bottom"><a href="profile.html">&nbsp;Profile</a></li>
-                <li class="border-bottom"><a href="admin.html">&nbsp;Admin</a></li>
-                <li class="border-bottom"><a href="forms.html">&nbsp;Forms</a></li>
-              </ul>
-            </div>
-          </div>
-    
-    
-          <div class="col-lg-9">       
-            <form>
-                <div class="row">
-                  <h3 class="col-sm-2 pull-left ">Register</h3>      
-                </div>
-                <br/>
-                
-                <div class="row">
-                  <label for="inputusername" class="col-sm-2 pull-left ">Username:</label>
-                    <input type="text" class="col-sm-10 border" id="inputusername" placeholder="Username">
-                </div>
-                <br/>
-                
-                <div class="row">
-                  <label for="inputpassword" class="col-sm-2 pull-left ">Password:</label>
-                    <input type="password" class="col-sm-10 border" id="inputpassword" placeholder="Password">
-                </div>
-                <br/>
-                
-                <div class="row">
-                  <label for="inputverifypassword" class="col-sm-2 pull-left ">Verify Password:</label>
-                    <input type="password" class="col-sm-10 border" id="inputverifypassword" placeholder="Verify Password">
-                </div>
-                <br/>
-                
-                <div class="row">
-                  <label for="inputemail" class="col-sm-2 pull-left ">Email:</label>
-                    <input type="email" class="col-sm-10 border" id="inputemail" placeholder="Email">
-                </div>
-                <br/>
-                
-                <div class="row">  
-                    <button type="submit" class="btn col-sm-offset-2 col-sm-10 border">Register</button>
-                </div>
-                <br/>
-                <br/>
-                
-              </form>
-            </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          </ul>
         </div>
-     </div>
-   </body>
+       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Register</h1>
+           <form class="form-horizontal">
+               <div class="form-group">
+                   <label for="inputText" class="col-sm-2 control-label">Username</label>
+                      <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputText" placeholder="Username">
+                      </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                      <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      </div>
+              </div>
+             <div class="form-group">
+                  <label for="inputPassword" class="col-sm-2 control-label">Verify Password</label>
+                      <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      </div>
+             </div>
+             <div class="form-group">
+                  <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                      <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                      </div>
+             </div>
+             <div class="form-group">
+                   <div class="col-sm-offset-2 col-sm-10">
+                        <a class="btn btn-primary btn-lg btn-block" href="profile.html" role="button">Register</a>
+                  </div>
+             </div>
+          </form>
+      </div>
+	  </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
