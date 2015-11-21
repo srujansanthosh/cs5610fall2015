@@ -1,6 +1,7 @@
 module.exports = function(app){
-	//var model = require("./models/user.model.js")(app);
-	require("./services/user.service.js")(app);
-	// formmodel = require("./models/form.model.js")(app);
-	//require("./services/form.service.js")(app,formmodel);
-  };
+    var userModel = require("./models/user.model.js")();
+    var formModel = require("./models/form.model.js")();
+    require("./services/user.service.js")(app, userModel);
+    require("./services/form.service.js")(app, formModel);
+    require("./services/field.service.js")(app, formModel);
+};

@@ -1,14 +1,14 @@
-//var q = require();
-var users = require("./user.mock.json");
 module.exports = function(app) {
-	    var api = {
-        findUserById: findUserById,
-        findUserByUsername: findUserByUsername,
-        findAllUsers: findAllUsers,
-        findUserByCredentials: findUserByCredentials,
-        createUser: createUser,
-		deleteUserById: deleteUserById,
-		updateUser: updateUser
+    var q = require("q");
+    var users = require("./user.mock.json");
+    var api = {
+    findUserById: findUserById,
+    findUserByUsername: findUserByUsername,
+    findAllUsers: findAllUsers,
+    findUserByCredentials: findUserByCredentials,
+    createUser: createUser,
+    deleteUserById: deleteUserById,
+    updateUser: updateUser
     };
     return api;
 	

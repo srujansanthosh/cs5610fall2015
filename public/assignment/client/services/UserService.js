@@ -26,14 +26,14 @@
             return deferred.promises;
 		}
 		
-		function findUserByUsernameAndPassword(uname, pword){
+		function findUserByUsernameAndPassword(user){
 		    var deferred = $q.defer();
-			console.log(uname);
-			console.log(pword);
-			var u = {'username':uname,'password':pword};
+			//console.log(uname);
+			//console.log(pword);
+			//var u = {'username':uname,'password':pword};
 			
 	//		$http.get("/api/assignment/user/username="+uname+"&password="+pword)
-						$http.get("/api/assignment/user/user=",u)
+			$http.get("/api/assignment/user/?username="+user.username+"&password="+user.password)
 		         .success(function(user){
                     deferred.resolve(user);
                 });
