@@ -1,11 +1,13 @@
-module.exports = function(app,model){
-  app.get("/api/assignment/user/username=:uname&password=:pword", findUserByUsernameAndPassword);
+var model = require("../models/user.model.js")();
+module.exports = function(app){
+//console.log("HELLO")
+  app.get("/api/assignment/user/user=", findUserByUsernameAndPassword);
   app.get("/api/assignment/user", findAllUsers);
   app.get("/api/assignment/user/username=:uname", findUserByUsername);
   app.get("/api/assignment/user/:id", findUserById);
- 	app.post("/api/assignment/user", addUser);
+  app.post("/api/assignment/user", addUser);
   app.put("/api/assignment/user/:id", updateUser);
- app.delete("/api/assignment/user/:id", deleteUser) 
+  app.delete("/api/assignment/user/:id", deleteUser) 
  // app.get("/api/assignment/user?username=alice&password=alice", findUserByUsernameAndPassword);
 	
     
@@ -19,7 +21,8 @@ module.exports = function(app,model){
     }
     
     	  function findUserByUsernameAndPassword(req, res) {
-           var credentials = {"username" : req.params.uname , "password" : req.params.pword};
+    	  console.log(req);
+           var credentials = req.body;
            model
             .findUserByCredentials(credentials)
             .then(function(user){

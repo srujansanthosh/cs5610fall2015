@@ -30,7 +30,10 @@
 		    var deferred = $q.defer();
 			console.log(uname);
 			console.log(pword);
-			$http.get("/api/assignment/user/username="+uname+"&password="+pword)
+			var u = {'username':uname,'password':pword};
+			
+	//		$http.get("/api/assignment/user/username="+uname+"&password="+pword)
+						$http.get("/api/assignment/user/user=",u)
 		         .success(function(user){
                     deferred.resolve(user);
                 });

@@ -7,9 +7,9 @@
        var model = this;
        model.login = login;
        function login(){
-            UserService.findUserByUsernameAndPassword(model.user.username,model.user.password)
-                 .then(function(user){
-                   model.user = user;
+                                console.log(model.user.username);                             UserService.findUserByUsernameAndPassword(model.user.username, model.user.password)
+                 .then(function(response){
+                   model.user = response;
                   $rootScope.user = model.user;
                   $location.path("/profile")
                 });

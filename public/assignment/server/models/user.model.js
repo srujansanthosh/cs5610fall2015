@@ -1,4 +1,4 @@
-var q = require("q");
+//var q = require();
 var users = require("./user.mock.json");
 module.exports = function(app) {
 	    var api = {
