@@ -6,18 +6,17 @@
     function LoginController($rootScope, $http, $location, UserService) {
        var model = this;
        model.login = login;
-
-        function login(user){
-            console.log(user.username);
-            console.log(user.password);
-
-            UserService.findUserByUsernameAndPassword(user)
-                 .then(function(response){
-                   model.user = response;
+       function login(){
+            UserService.findUserByUsernameAndPassword(model.user.username,model.user.password)
+                 .then(function(users){
+                  if (users[0] == null){
+                      alert("User credentials submitted do not exist");
+                  } else{
+                  model.user = users[0];
                   $rootScope.user = model.user;
                   $location.path("/profile")
+                  }
                 });
-
-         }
+         };
     }
 })();

@@ -9,7 +9,6 @@ module.exports = function(app,model){
            model
             .findAllFieldsForForm(req.params.formId)
             .then(function(fields){
-                console.log(fields);
                 res.json(fields);
             });
     }
@@ -44,7 +43,7 @@ module.exports = function(app,model){
            model
             .deleteField(req.params.formId, req.params.fieldId)
             .then(function(fields){
-                res.json(fields);
+                   res.json(fields);
             });
     }
     

@@ -1,51 +1,12 @@
-var model = require("../models/user.model.js")();
-module.exports = function(app){
-console.log("HELLO")
-  //app.get("/api/assignment/user/user", findUserByUsernameAndPassword);
+module.exports = function(app,model){
+  app.get("/api/assignment/user/username=:uname&password=:pword", findUserByUsernameAndPassword);
   app.get("/api/assignment/user", findAllUsers);
-  //app.get("/api/assignment/user/username=:uname", findUserByUsername);
+  app.get("/api/assignment/user/username=:uname", findUserByUsername);
   app.get("/api/assignment/user/:id", findUserById);
-  app.post("/api/assignment/user", addUser);
+ 	app.post("/api/assignment/user", addUser);
   app.put("/api/assignment/user/:id", updateUser);
   app.delete("/api/assignment/user/:id", deleteUser) 
- // app.get("/api/assignment/user?username=alice&password=alice", findUserByUsernameAndPassword);
-	
-    function findAllUsers(req,res){
-
-        var username = req.param.username;
-        var password = req.param.password;
-
-        // req has username & password
-        if(username != null && password != null ){
-            var credentials = { username: username,
-                                password: password
-                              }
-            model.findUserByCredentials(credentials)
-                .then(function(user){
-                    res.json(user);
-                });
-            return;
-        }
-        // req has only username
-        if(username != null && password == null){
-            model
-                .findUserByUsername(username)
-                .then(function(user){
-                    res.json(user);
-                });
-            return;
-        }
-
-        model
-            .findAllUsers()
-            .then(function(users){
-                res.json(users);
-            });
-        //req does not have username or password
-
-    }
-
-
+     
 	  function addUser(req, res) {
         var user = req.body;
           model
@@ -56,22 +17,21 @@ console.log("HELLO")
     }
     
     	  function findUserByUsernameAndPassword(req, res) {
-    	  console.log(req);
-           var credentials = req.body;
+           var credentials = {"username" : req.params.uname , "password" : req.params.pword};
            model
             .findUserByCredentials(credentials)
             .then(function(user){
-                res.json(user);
+               res.json(user);
             });
     }
     
-    	  /*function findAllUsers(req, res) {
+    	  function findAllUsers(req, res) {
            model
             .findAllUsers()
             .then(function(users){
                 res.json(users);
             });
-    } */
+    }
     
     	  function findUserByUsername(req, res) {
             model

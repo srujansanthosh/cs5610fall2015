@@ -26,21 +26,15 @@
             return deferred.promises;
 		}
 		
-		function findUserByUsernameAndPassword(user){
+		function findUserByUsernameAndPassword(uname, pword){
 		    var deferred = $q.defer();
-			//console.log(uname);
-			//console.log(pword);
-			//var u = {'username':uname,'password':pword};
-			
-	//		$http.get("/api/assignment/user/username="+uname+"&password="+pword)
-			$http.get("/api/assignment/user/?username="+user.username+"&password="+user.password)
+			$http.get("/api/assignment/user/username="+uname+"&password="+pword)
 		         .success(function(user){
-                    deferred.resolve(user);
+					deferred.resolve(user);
                 });
             return deferred.promise;
 			}	
-		
-	    
+			    
 		function createUser(user){  
 		  var deferred = $q.defer();
             $http.post("/api/assignment/user",user)
