@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="scrollHidden">
+<head>
+<title>MYBUY</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="services/jquery-1.11.2.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript" src="services/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="services/angular.js"></script>
+<script type="text/javascript" src="services/angular-route.min.js"></script>
+<script type="text/javascript" src="services/ui-bootstrap-tpls-0.12.1.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="services/MainController.js"></script>
+<script type="text/javascript" src="views/UserDetails/UserProfileCntrl.js"></script>
+<script type="text/javascript" src="views/login/LoginController.js"></script>
+<script type="text/javascript" src="views/search/SearchController.js"></script>
+<script type="text/javascript" src="views/search/ProductDetailsCntrl.js"></script>
+<script type="text/javascript" src="views/UserDetails/UserDetailsCntrl.js"></script>
+<script type="text/javascript" src="views/registration/RegistrationCntrl.js"></script>
+<script type="text/javascript" src="services/ProductService.js"></script>
+<script type="text/javascript" src="services/UserService.js"></script>
+<script type="text/javascript" src="views/store/storeController.js"></script>
+</head>
+<body ng-app="AngularApp">
+	<div class="main-wrapper">
+		<div class="container" ng-controller="MainController">
+			<nav class="navbar navbar-inverse noMargin page-scroll">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+							aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span>
+						</button>
+						<ul class="navbar-brand">
+							<li id="homelink"><a href="#/home">
+										&nbsp; MYBUY
+								</span> <span class="sr-only">(current)</span></a></li>
+						</ul>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav ">
+							<li><a href="" class="dropdown-toggle" data-toggle="dropdown"> <span class="">Products </span> <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-level">
+									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops</a>
+										<ul class="dropdown-menu">
+											<li><a href="#/search/MOBILE COMPUTING/Lenovo">Lenovo</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Samsung">Samsung</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Dell">Dell</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Acer">Acer</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Asus">Asus</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Toshiba">Toshiba</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Apple">Apple</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Microsoft">Microsoft</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Hp">HP</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MOBILE COMPUTING/Alienware">Alienware</a></li>
+										</ul>
+                                    </li>
+
+									<li class="divider"></li>
+									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Microwaves</a>
+										<ul class="dropdown-menu">
+											<li><a href="#/search/MICROWAVE/Frigidaire">Frigidaire</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MICROWAVE/Samsung">Samsung</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MICROWAVE/LG">LG</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/MICROWAVE/Panasonic">Panasonic</a></li>
+										</ul>
+                                    </li>
+
+									<li class="divider"></li>
+									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Washer and Dryers</a>
+										<ul class="dropdown-menu">
+											<li><a href="#/search/LAUNDRY/Whirlpool">Whirlpool</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/LAUNDRY/Samsung">Samsung</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/LAUNDRY/LG">LG</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/LAUNDRY/GE">GE</a></li>
+										</ul>
+                                    </li>
+
+									<li class="divider"></li>
+									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Major appliances</a>
+										<ul class="dropdown-menu">
+											<li><a href="#/search/KITCHEN/Bosch">Bosch</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/KITCHEN/Samsung">Samsung</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/KITCHEN/Frigidaire">Frigidaire</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/KITCHEN/Lg">Lg</a></li>
+										</ul>
+                                    </li>
+
+									<li class="divider"></li>
+									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Camera & Camcorders</a>
+										<ul class="dropdown-menu">
+											<li><a href="#/search/DIGITAL CAMERA ACCY/Canon">Canon</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/DIGITAL CAMERA ACCY/DigiPower">DigiPower</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/DIGITAL CAMERA ACCY/Sony">Sony</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/DIGITAL CAMERA ACCY/Nikon">Nikon</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/HOME COMPONENTS/Bower">Bower</a></li>
+										</ul>
+                                    </li>
+
+									<li class="divider"></li>
+									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Portable Audio</a>
+										<ul class="dropdown-menu">
+											<li><a href="#/search/HEADPHONES/Sony">Sony</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/HEADPHONES/Jbl">Jbl</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/HEADPHONES/Bose">Bose</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/HEADPHONES/Lg">LG</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/HEADPHONES/Skullcandy">Skullcandy</a></li>
+										</ul>
+                                    </li>
+
+									<li class="divider"></li>
+									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sound systems</a>
+										<ul class="dropdown-menu">
+											<li><a href="#/search/SPEAKERS/Sony">Sony</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/HOME COMPONENTS/Onkyo">Onkyo</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/SPEAKERS/Yamaha">Yamaha</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/HOME COMPONENTS/Denon">Denon</a></li>
+											<li class="divider"></li>
+											<li><a href="#/search/SPEAKERS/Pioneer">Pioneer</a></li>
+										</ul>
+                                    </li>
+
+                                    <li class="divider"></li>
+                                    <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobile Phones</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#/search/SPRINT HARDWARE/Samsung">Samsung</a></li>
+                                            <li class="divider"></li>
+                                            <!--<li><a href="#/search/SPRINT HARDWARE/Nokia">Nokia</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#/search/SPRINT HARDWARE/Blackberry">Blackberry</a></li>
+                                            <li class="divider"></li> -->
+                                            <li><a href="#/search/SPRINT HARDWARE/Lg">LG</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#/search/SPRINT HARDWARE/Motorola">Motorola</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#/search/SPRINT HARDWARE/Htc">HTC</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+							<li id="favoritelink" ng-show="currentuser"><a href="#/profile/user"> <span class="menucolor">My Account</span></a></li>
+							<!-- <li><a href="#/storeLocator"> <span class="menucolor">Store Locator</span></a></li> -->
+						</ul>
+
+
+						<ul class="nav navbar-nav navbar-right" ng-show="currentuser">
+							<li><a href="#/profile/user"> <span class="welcome"> Welcome {{user.firstname}}</span></a></li>
+							<li role="presentation"><a href="#/profile/cart"> <span class="menucolor"> <span
+										class="glyphicon glyphicon-shopping-cart"></span>
+								</span> <span class="badge">{{cartCount}}</span></a></li>
+							<li><a href="#/logout" ng-click="logout()"> <span class="menucolor"> Logout </span></a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right" ng-show="!currentuser">
+							<li id="registerlink"><a href="#/register">Register</a></li>
+							<li id="loginlink"><a href="#/login"><span class="glyphicon glyphicon-user"> </span>&nbsp;Login</a></li>
+						</ul>
+					</div>
+					<!--/.navbar-collapse -->
+					</div>
+			</nav>
+			<div ng-view></div>
+		</div>
+	</div>
+</body>
+</html>
