@@ -145,13 +145,13 @@
                 <tr ng-repeat="review in reviews">
                     <td>
                     	<h4> <p> {{review.title}} </p> </h4>
-                    	<p>class="reviewTitle">Customer rating :</h5>
+                    	<p class="reviewTitle">Customer rating :</h5>
                     	<span>{{review.rating}} out of 5
         				<div star-rating rating-value="review.rating" max=5 ></div>
         				</span></p>
                     	<p>{{review.comment}}</p>
                     	<p>
-                    	<span class="reviewTitle">Posted by :</span> 
+                    	<span class="reviewTitle">Reviewed by :</span>
                     	<span ng-if="review.local">
                     	<a href="#/showUserDetails/{{review.reviewer[0].name}}">{{review.reviewer[0].name}}</a>
                     	</span>
@@ -168,7 +168,7 @@
    </div>
    
    <div class="col-sm-3">
-   <h3>view similar Products </h3>
+   <h3>Related Products to explore </h3>
    		<ul>
    		 <li ng-repeat="relatedProduct in relatedProducts">
    		 	<div><img class="centeredImg" ng-src="{{relatedProduct.image}}" alt="Image currently unavailable"></div>

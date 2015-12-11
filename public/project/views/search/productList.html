@@ -73,7 +73,7 @@
 				</thead>
 				<tbody>
 				<tr ng-repeat="product in products | offset: currentPage*itemsPerPage | limitTo : itemsPerPage | orderBy:orderedBy">
-					<td width="20%" class="prdtimg"><img class="centeredImg" ng-src="{{product.image}}" alt="Image currently unavailable"></td>
+					<td width="15%" class="prdtimg"><img class="centeredImg" ng-src="{{product.image}}" alt="Image unavailable"></td>
 					<td width="60%"><a href="#/viewDetails/{{product.sku}}">
 						<h4>
 							<b>{{product.name}}</b>
@@ -88,7 +88,7 @@
 						<p ng-show="product.customerReviewAverage">
 							<b>Customer rating :</b> {{product.customerReviewAverage}} out of 5
 						</p></td>
-					<td width="30%" class="priceDetails">
+					<td width="20%" class="priceDetails">
 
 						<button ng-click="addToFavorites(product.sku)" class="btn btn-success">
 							<span class="glyphicon glyphicon-thumbs-up"></span>  Like
@@ -108,11 +108,11 @@
 				</tbody>
 				<tfoot style="text-align: center">
 				<tr>
-					<td colspan="4"><span class="pagination"> <span ng-class="prevPageDisabled()"> <a href ng-click="prevPage()">«
+					<td colspan="4"><span class="pagination"> <span ng-class="prevPageDisabled()"> <a href ng-click="prevPage()">
 						Prev</a>
 							</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ng-repeat="n in range()" ng-class="{active: n == currentPage}"
 																						   ng-click="setPage(n)"> <a href="#">{{n+1}}</a>
-							</span> <span ng-class="nextPageDisabled()"> <a href ng-click="nextPage()">Next »</a>
+							</span> <span ng-class="nextPageDisabled()"> <a href ng-click="nextPage()">Next </a>
 							</span>
 						</span></td>
 				</tr>
