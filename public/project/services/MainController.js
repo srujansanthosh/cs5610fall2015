@@ -16,9 +16,7 @@ app.controller('MainController', function ($scope,$route, UserService, $rootScop
 				});
 	}
 
-
-
-	$scope.myInterval = 1900;
+$scope.myInterval = 1900;
 	$scope.slides = [
 		{
 			image: 'http://s29.postimg.org/mtxcjfibb/headphones.jpg',
@@ -33,6 +31,7 @@ app.controller('MainController', function ($scope,$route, UserService, $rootScop
 			image: 'http://s29.postimg.org/qhd3phqif/iphone.jpg',
 		},
 	];
+
 
 });
 

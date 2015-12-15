@@ -27,11 +27,46 @@
 <script type="text/javascript" src="views/store/storeController.js"></script>
 </head>
 <body ng-app="AngularApp">
-	<div class="main-wrapper">
-		<div class="container" ng-controller="MainController">
-			<nav class="navbar navbar-inverse noMargin page-scroll">
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header page-scroll">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden">
+					<a href="#page-top"></a>
+				</li>
+				<li class="page-scroll">
+					<a href="#portfolio">Portfolio</a>
+				</li>
+				<li class="page-scroll">
+					<a href="#about">About</a>
+				</li>
+				<li class="page-scroll">
+					<a href="#contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>-->
+
+
+	<!--<div class="main-wrapper">-->
+
+			<!--<nav class="navbar navbar-inverse noMargin page-scroll navbar-primary navbar-static-top" role="navigation">-->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container" ng-controller="MainController" style="background: #2b669a">
 				<div class="container-fluid">
-					<div class="navbar-header">
+					<!--<div class="navbar-header">-->
+                    <div class="navbar-header page-scroll">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 							aria-controls="navbar">
 							<span class="sr-only">Toggle navigation</span> 
@@ -40,14 +75,12 @@
 							<span class="icon-bar"></span>
 						</button>
 						<ul class="navbar-brand">
-							<li id="homelink"><a href="#/home">
-										&nbsp; MYBUY
-								</span> <span class="sr-only">(current)</span></a></li>
+							<li id="homelink"><a class="new-color" href="#/home">MYBUY<span class="sr-only">(current)</span></a></li>
 						</ul>
 					</div>
-					<div id="navbar" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav ">
-							<li><a href="" class="dropdown-toggle" data-toggle="dropdown"> <span class="">Products </span> <b class="caret"></b></a>
+					<div id="navbar" class="navbar-collapse collapse navbar-primary">
+						<ul class="nav navbar-nav">
+							<li><a href="" class="dropdown-toggle" data-toggle="dropdown"> <span class="new-color">Products </span> <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-level">
 									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops</a>
 										<ul class="dropdown-menu">
@@ -178,28 +211,28 @@
                                 </ul>
                             </li>
 
-							<li id="favoritelink" ng-show="currentuser"><a href="#/profile/user"> <span class="menucolor">My Account</span></a></li>
+							<!--<li id="favoritelink" ng-show="currentuser"><a href="#/profile/user"> <span class="menucolor">My Account</span></a></li>-->
 							<!-- <li><a href="#/storeLocator"> <span class="menucolor">Store Locator</span></a></li> -->
 						</ul>
 
 
 						<ul class="nav navbar-nav navbar-right" ng-show="currentuser">
-							<li><a href="#/profile/user"> <span class="welcome"> Welcome {{user.firstname}}</span></a></li>
+							<li><a href="#/profile/user"> <span class="welcome"> Hello, {{user.firstname}}</span></a></li>
 							<li role="presentation"><a href="#/profile/cart"> <span class="menucolor"> <span
 										class="glyphicon glyphicon-shopping-cart"></span>
 								</span> <span class="badge">{{cartCount}}</span></a></li>
-							<li><a href="#/logout" ng-click="logout()"> <span class="menucolor"> Logout </span></a></li>
+							<li><a href="#/logout" ng-click="logout()"> <span class="welcome">Logout </span></a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right" ng-show="!currentuser">
-							<li id="registerlink"><a href="#/register">Register</a></li>
-							<li id="loginlink"><a href="#/login"><span class="glyphicon glyphicon-user"> </span>&nbsp;Login</a></li>
+							<li id="registerlink"><a href="#/register"><h5 class="welcome">Register</h5></a></li>
+							<li id="loginlink"><a href="#/login"><h5 class="welcome">Login</h5></a></li>
 						</ul>
 					</div>
 					<!--/.navbar-collapse -->
 					</div>
+                </div>
 			</nav>
 			<div ng-view></div>
-		</div>
-	</div>
+
 </body>
 </html>

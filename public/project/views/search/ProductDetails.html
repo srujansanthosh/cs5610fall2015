@@ -1,4 +1,4 @@
-<div class="tablediv row">
+<div class="tablediv row" style="margin-top: 60px">
     
     <div class="col-sm-9">
         <table class="table table-striped table-hover table-responsive">
@@ -17,10 +17,6 @@
                     <br/> <br/>
                         <button ng-click="addToCart(product.sku)" class=" btn btn-success">Add to cart</button>
                         <div class="salePrice"> ${{product.salePrice}} </div>
-                       <!-- <div ng-if="(product.regularPrice - product.salePrice) > 0"> ON SALE </div> -->
-                       <!-- <div class="regularPrice"> (Reg. price: ${{product.regularPrice}}) </div> -->
-                       <!-- <div ng-if="(product.regularPrice - product.salePrice) > 0"> -->
-                        	<!-- <div class="savings"> You save ${{product.regularPrice - product.salePrice}}!! </div> -->
                     </td>
                 </tr>
             </tbody>
@@ -30,7 +26,7 @@
     <tab class="cursor" heading="Specifications">
     	<table class="table table-striped table-hover table-responsive">
             <tbody>
-            	<h3>Specifications :</h3>
+            	<h3 class="new-h">Specifications :</h3>
             	<tr>
                     <td>
                     	<b><h4>Specs : </h4> </b>
@@ -110,7 +106,7 @@
         <table class="table table-striped table-hover table-responsive">
             <tbody>
             	<tr>
-            		<h3>Product features :</h3>
+            		<h3 class="new-h">Product features :</h3>
                 	<ul ng-repeat="item in product.features">
                     	<li>
                     		{{item.feature}}
@@ -121,7 +117,7 @@
         </table>
     </tab>
     <tab class="cursor" heading="Ratings & Reviews" ng-click="getReviews()">
-    <h3>Ratings & Reviews:</h3>
+    <h3 class="new-h">Ratings & Reviews:</h3>
     <span class="reviewTitle" ng-show="reviews.length == 0"><p>Be the first one to review this product.</p></span>
     <p><button class="btn btn-primary" ng-click="show=!show; myshow=!myshow; newReview.rating=1; CheckIfLogged()" ng-show="myshow">
     <span class="glyphicon glyphicon-comment"></span>&nbsp; &nbsp;Write a review</button> </p>
@@ -138,7 +134,7 @@
        <br/>
        <div><textarea id="reviewArea" rows="4" cols="75" ng-model="newReview.comment" ng-show="show" placeholder="Write your review here"></textarea></div>
        <div><textarea id="reviewTitle" rows="1" cols="75" ng-model="newReview.title" ng-show="newReview.comment" placeholder="Title for your review"></textarea> </div>
-       <div><button id="reviewSubmit" class="btn btn-info" ng-click="show=!show; myshow=!myshow; submitReview(newReview)" ng-show="newReview.comment"> Submit</button> </div>
+       <div><button id="reviewSubmit" class="btn btn-primary" ng-click="show=!show; myshow=!myshow; submitReview(newReview)" ng-show="newReview.comment"> Submit</button> </div>
     </div>
     <table class="table table-striped table-hover table-responsive" ng-show="reviews">
             <tbody>
@@ -157,8 +153,8 @@
                     	</span>
                     	<span ng-if="!review.local">
                     	{{review.reviewer[0].name}}
-                    	</span> 
-                    	<span class="reviewTitle"> on </span>{{review.submissionTime}} </p>
+                    	</span>
+                    	<span class="reviewTitle"> on </span>{{review.submissionTime | date:'yyyy-MM-dd'}} </p>
                     </td>
             	</tr>
             </tbody>
@@ -168,14 +164,13 @@
    </div>
    
    <div class="col-sm-3">
-   <h3>Related Products to explore </h3>
+   <h3 class="new-h">Related Products to explore </h3>
    		<ul>
    		 <li ng-repeat="relatedProduct in relatedProducts">
    		 	<div><img class="centeredImg" ng-src="{{relatedProduct.image}}" alt="Image currently unavailable"></div>
-            <div><a href="#/viewDetails/{{relatedProduct.sku}}"> <b>{{product.name}}</b> </a> </div>
+            <div><a href="#/viewDetails/{{relatedProduct.sku}}"> <b class="new-h">{{product.name}}</b> </a> </div>
             <br/>
          </li>
    		</ul>
    </div>
-   
 </div>
