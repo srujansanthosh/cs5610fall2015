@@ -55,12 +55,19 @@
 				<tr>
 					<th class="centerAlign">Product Image</th>
 					<th class="centerAlign">Product description</th>
-					<th class="centerAlign">Price details</th>
+					<th class="centerAlign">Price</th>
 				</tr>
 				</thead>
 				<tbody>
 				<tr ng-repeat="product in products | offset: currentPage*itemsPerPage | limitTo : itemsPerPage | orderBy:orderedBy">
-					<td width="15%" class="prdtimg"><img class="centeredImg" ng-src="{{product.image}}" alt="Image unavailable"></td>
+					<!--<td width="10%" class="prdtimg">
+						<img class="centeredImg" ng-src="{{product.image}}" alt="Image unavailable">
+					</td> -->
+					<td width="10%" class="prdtimg">
+						<div style="margin: 0 auto; width: 130px">
+							<img class="centeredImg pro-img" ng-src="{{product.image}}" alt="Image unavailable" style="width: 130px">
+						</div>
+					</td>
 					<td width="60%"><a href="#/viewDetails/{{product.sku}}">
 						<h4 class="new-h">
 							<b>{{product.name}}</b>
@@ -76,6 +83,8 @@
 							<b>Customer rating :</b> {{product.customerReviewAverage}} out of 5
 						</p></td>
 					<td width="20%" class="priceDetails">
+						<div class="salePrice">${{product.salePrice | number : 2}}</div>
+						<br>
 
 						<button ng-click="addToFavorites(product.sku)" class="btn btn-success">
 							<span class="glyphicon glyphicon-thumbs-up"></span>  Like
@@ -83,7 +92,7 @@
 						<button ng-click="addToCart(product.sku)" class=" btn btn-primary">
 							<span class="glyphicon glyphicon-shopping-cart"></span> Add to cart
 						</button>
-						<div class="salePrice">${{product.salePrice | number : 2}}</div>
+
 					</td>
 
 				</tr>

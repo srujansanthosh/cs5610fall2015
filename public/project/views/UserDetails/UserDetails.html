@@ -1,7 +1,7 @@
 <div class="col-sm-8" ng-show="!user">
  <span class="instructions"> Login to view your profile</span>
 </div>
-<div ng-show="user">
+<div ng-show="user" style="margin-top: 100px">
 
     <div class="row">
         <div class=" col-sm-4">
@@ -29,16 +29,23 @@
     			<table class="table table-striped table-hover table-bordered table-responsive">
                 <tbody>
                     <tr>
-                        <td width="35%"> <b>First Name </b></td> <td width="65%"> {{user.firstname}}</td>
+                        <td width="35%"><b>First Name </b></td><td width="65%"> {{user.firstname}}</td>
                     </tr>
                     <tr>
-                        <td > <b>Last Name </b></td> <td > {{user.firstname}}</td>
+                        <td><b>Last Name </b></td>
+                        <td>{{user.firstname}}</td>
                     </tr>
                     <tr>
-                        <td > <b>Email </b></td> <td > {{user.email}}</td>
+                        <td><b>Email </b></td>
+                        <td><a href="mailto:{{user.email}}"></a>{{user.email}}</td>
                     </tr>
                     <tr>
-                        <td > <b>Country </b></td> <td > {{user.country}}</td>
+                        <td><b>Phone </b></td>
+                        <td><a href="tel:{{user.phone}}"></a>{{user.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td> <b>Country </b></td>
+                        <td> {{user.country}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -47,7 +54,7 @@
         	<div ng-show="favoriteProducts.length == 0">
         	<br/>
     		<br/>
-        	<span class="instructions taberror"> Sorry this user doesn't have any products as his favorites :-(</span>
+        	  This user has no favorite products.
 			</div>
 			
 			<table class="table table-striped table-hover table-bordered table-responsive" ng-show="favoriteProducts.length>0">
@@ -61,7 +68,7 @@
                         Product description
                     </th>
                     <th>
-                        Price details
+                        Price
                     </th>
                 </tr>
             </thead>
@@ -80,11 +87,6 @@
                             <span class="glyphicon glyphicon-shopping-star"></span> Add to my favorites
                         </button>
                         <div class="salePrice"> ${{product.salePrice}} </div>
-                        <div ng-if="(product.regularPrice - product.salePrice) > 0"> ON SALE </div>
-                        <div class="regularPrice"> (Reg. price: ${{product.regularPrice}}) </div>
-                        <div ng-if="(product.regularPrice - product.salePrice) > 0">
-                        	<div class="savings"> You save ${{product.regularPrice - product.salePrice}}!! </div>
-                        </div>
                     </td>
                 </tr>
             </tbody>
@@ -94,7 +96,7 @@
     		<div ng-show="reviewedProducts.length == 0" >
     		<br/>
     		<br/>
-    		<span class="instructions taberror"> Sorry this user has not reviewed any products yet :-(</span>
+                <b>This user has not reviewed any products.</b>
 			</div>
 			
 			<table class="table table-striped table-hover table-bordered table-responsive" ng-show="reviewedProducts.length >0">
@@ -110,8 +112,8 @@
                     <td width="30%">
                         <h4>{{product.userReview.title}}</h4>
                         <h6>{{product.userReview.comment}}</h6>
-                        My rating : <span>{{product.userReview.rating}} out of 5
-        				<div star-rating rating-value="product.userReview.rating" max=5 ></div>
+                        My rating : <span>{{product.userReview.rating}} out of 5</span>
+        				<div star-rating rating-value="product.userReview.rating" max=5></div>
                     </td>
                 </tr>
             </tbody>

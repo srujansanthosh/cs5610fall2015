@@ -92,6 +92,11 @@ h2 {
     box-align:center;
 }
 
+.pro-img{
+
+}
+
+
 .row{
     padding-left:50px;
     padding-right:50px;
@@ -377,6 +382,11 @@ ul.rating {
 	color:whitesmoke;
 }
 
+.welcome-title{
+	font-size : 39px;
+	color:whitesmoke;
+}
+
 .heading{
 	text-align: center;
 	font-size: 20px;
@@ -559,6 +569,10 @@ hr.star-primary:after {
 
 .img-centered {
 	margin: 0 auto;
+}
+
+.centeredImg{
+	text-align:center;
 }
 
 header {
