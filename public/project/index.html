@@ -2,6 +2,7 @@
 <html class="scrollHidden">
 <head>
 <title>MYBUY</title>
+    <meta name="viewport" content="width= device-width,initial-scale=1">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="services/jquery-1.11.2.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.js"></script>
@@ -26,15 +27,23 @@
 <script type="text/javascript" src="services/UserService.js"></script>
 <script type="text/javascript" src="views/store/storeController.js"></script>
 </head>
+
+<script>
+    $(document).ready(function () {
+        $(".navbar-nav li a").click(function(event) {
+            $(".navbar-collapse").collapse('hide');
+        });
+    });
+</script>
 <body ng-app="AngularApp">
 
 
-	<!--<div class="main-wrapper">-->
+	<!--<div class="main-wrapper">  :not(:has(a[href=\\/link3])) -->
 
 			<!--<nav class="navbar navbar-inverse noMargin page-scroll navbar-primary navbar-static-top" role="navigation">-->
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container" ng-controller="MainController" style="background: #2b669a">
-				<div class="container-fluid">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <!--<div class="container" ng-controller="MainController" style="background: #2b669a">-->
+				<div class="container-fluid " style="background: #2b669a">
 					<!--<div class="navbar-header">-->
                     <div class="navbar-header page-scroll">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
@@ -47,10 +56,12 @@
 						<ul class="navbar-brand">
 							<li id="homelink"><a class="welcome-title" href="#/home">MYBUY<span class="sr-only">(current)</span></a></li>
 						</ul>
+						<!--<a class="navbar-brand welcome-title" href="#/home">MYBUY<span class="sr-only">(current)</span></a>
+						</a>-->
 					</div>
 					<div id="navbar" class="navbar-collapse collapse navbar-primary">
 						<ul class="nav navbar-nav">
-							<li><a href="" class="dropdown-toggle" data-toggle="dropdown"> <span class="welcome">Products</span><b class="caret welcome"></b></a>
+							<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="welcome">Products</span><b class="caret welcome"></b></a>
 								<ul class="dropdown-menu multi-level">
 									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops</a>
 										<ul class="dropdown-menu">
@@ -176,13 +187,10 @@
                                             <li><a href="#/search/SPRINT HARDWARE/Htc">HTC</a></li>
                                         </ul>
                                     </li>
-
-
                                 </ul>
                             </li>
-
 							<!--<li id="favoritelink" ng-show="currentuser"><a href="#/profile/user"> <span class="menucolor">My Account</span></a></li>-->
-							<!-- <li><a href="#/storeLocator"> <span class="menucolor">Store Locator</span></a></li> -->
+							<li><a href="#/storeLocator"> <span class="menucolor">BestBuy Store Locator</span></a></li>
 						</ul>
 
 
