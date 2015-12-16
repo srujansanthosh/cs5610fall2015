@@ -26,19 +26,12 @@
 <script type="text/javascript" src="services/ProductService.js"></script>
 <script type="text/javascript" src="services/UserService.js"></script>
 <script type="text/javascript" src="views/store/storeController.js"></script>
+    <script type="text/javascript" src="views/store/hide-nav.js"></script>
 </head>
-
-<script>
-    $(document).ready(function () {
-        $(".navbar-nav li a").click(function(event) {
-            $(".navbar-collapse").collapse('hide');
-        });
-    });
-</script>
 <body ng-app="AngularApp">
 
 
-	<!--<div class="main-wrapper">  :not(:has(a[href=\\/link3])) -->
+	<!--<div class="main-wrapper">
 
 			<!--<nav class="navbar navbar-inverse noMargin page-scroll navbar-primary navbar-static-top" role="navigation">-->
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -61,7 +54,7 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse navbar-primary">
 						<ul class="nav navbar-nav">
-							<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="welcome">Products</span><b class="caret welcome"></b></a>
+							<li><a id="pro-id" href="" class="dropdown-toggle" data-toggle="dropdown"><span class="welcome">Products</span><b class="caret welcome"></b></a>
 								<ul class="dropdown-menu multi-level">
 									<li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops</a>
 										<ul class="dropdown-menu">
