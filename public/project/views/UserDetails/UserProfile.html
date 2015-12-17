@@ -228,7 +228,10 @@
                     </table>
                 </div>
 			<div class="extendMargin"></div>
-			</tab> <tab class="cursor" heading="Cart" active="cartActive">
+			</tab>
+
+
+                <tab class="cursor" heading="Cart" active="cartActive">
 			<div ng-show="cartProducts.length == 0">
 				<br />
 				<br />
@@ -303,8 +306,9 @@
 				<b>Total Price :</b> ${{totalPrice | number : 2}}
 			</div> -->
 			<div class="extendMargin"></div>
-			
-			</tab> <tab class="cursor" heading="Reviews" active="reviewActive">
+			</tab>
+
+                <tab class="cursor" heading="Reviews" active="reviewActive">
 			<div ng-show="reviewedProducts.length == 0">
 				<br /> <br />
 				<h2>You have not reviwed any product </h2>

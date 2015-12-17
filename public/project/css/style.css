@@ -364,8 +364,17 @@ ul.rating {
 	width:100%;
 }
 
+.new-tab{
+    width:auto;
+}
+
 .topPadding{
 	padding-top : 50px;
+}
+
+.table-nonfluid {
+    table-layout: fixed;
+    word-wrap: break-word;
 }
 
 .linePadding{
