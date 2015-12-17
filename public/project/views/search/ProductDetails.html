@@ -15,7 +15,9 @@
                     </td>
                     <td width="30%" class="priceDetails">
                     <br/> <br/>
-                        <button ng-click="addToCart(product.sku)" class=" btn btn-success">Add to cart</button>
+                        <button ng-click="addToFavorites(product.sku)" class="btn btn-success">Like
+                        </button>
+                        <button ng-click="addToCart(product.sku)" class=" btn btn-primary">Add to cart</button>
                         <div class="salePrice"> ${{product.salePrice}} </div>
                     </td>
                 </tr>
