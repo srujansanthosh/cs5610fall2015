@@ -83,15 +83,17 @@
       <file leaf-file-name="UserProfile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/UserDetails/UserProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31362468">
-              <caret line="394" column="71" selection-start-line="394" selection-start-column="71" selection-end-line="394" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.23650385">
+              <caret line="630" column="89" selection-start-line="630" selection-start-column="89" selection-end-line="630" selection-end-column="89" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#tab#0;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#0;n#tab#0;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#div#1;n#div#0;n#tab#0;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#tab#1;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#1;n#tab#2;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#tab#1;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#tab#1;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#tab#2;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#2;n#tab#2;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -886,15 +888,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/UserDetails/UserProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31362468">
-          <caret line="394" column="71" selection-start-line="394" selection-start-column="71" selection-end-line="394" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.23650385">
+          <caret line="630" column="89" selection-start-line="630" selection-start-column="89" selection-end-line="630" selection-end-column="89" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#tab#0;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#0;n#tab#0;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#div#1;n#div#0;n#tab#0;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#tab#1;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#tab#2;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#tab#1;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#tab#1;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#tab#2;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#2;n#tab#2;n#tabset#0;n#div#1;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
