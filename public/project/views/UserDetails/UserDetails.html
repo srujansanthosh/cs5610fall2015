@@ -50,15 +50,15 @@
                 </tbody>
             </table>
     		</tab>
-        	<tab class="cursor" heading="Favorites">
+        	<    class="cursor" heading="Favorites">
         	<div ng-show="favoriteProducts.length == 0">
         	<br/>
     		<br/>
         	  This user has no favorite products.
 			</div>
-			
-			<table class="table table-striped table-hover table-bordered table-responsive" ng-show="favoriteProducts.length>0">
             
+			<div style="overflow-x: auto">
+			<table class="table table-striped table-hover table-bordered table-responsive" ng-show="favoriteProducts.length>0">
             <thead>
                 <tr>
                     <th>
@@ -91,6 +91,8 @@
                 </tr>
             </tbody>
         </table>
+            </div>
+
     		</tab>
     		<tab class="cursor" heading="Reviews">
     		<div ng-show="reviewedProducts.length == 0" >
