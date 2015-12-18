@@ -15,7 +15,7 @@
 		<div class="col-sm-10">
 			<tabset justified="true"> <tab class="cursor nav nav-pills" heading="Personal Information" active="userActive">
 			<div class="row topPadding">
-				<div class="col-sm-3">
+				<div class="col-sm-3" style="margin-left: 20px">
 				
 					<div class="linePadding">
 						<button class="btn btn-primary" ng-click="updProfile=false; profile=true; updPswd=false">
@@ -26,7 +26,7 @@
 						<button class="btn btn-primary" ng-click="profile=false; updProfile=false; updPswd=true">Change Password</button>
 					</div>
 
-					<div class="linePadding">
+					<div class="linePadding" style="margin-bottom: 30px">
 						<button class="btn btn-primary" ng-click="updProfile=true; profile=false; updPswd=false">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
 					</div>
 				</div>
@@ -209,9 +209,7 @@
                                     </p>
                                 </td>
                                 <td width="20%" class="priceDetails">
-                                    <button ng-click="addToCart(product.sku)" class=" btn btn-success">
-                                        <span class="glyphicon glyphicon-shopping-cart"></span> Add to cart
-                                    </button>
+                                    <button ng-click="addToCart(product.sku)" class=" btn btn-success">Add to cart</button>
                                     <div class="salePrice">${{product.salePrice | number : 2}}</div>
                                     <br>
                                     <br>
