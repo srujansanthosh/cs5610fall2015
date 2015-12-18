@@ -49,8 +49,8 @@
 
 	<div class="row linePadding">
 		<div class="col-sm-1"></div>
-		<div class="col-sm-10" style="overflow-x: auto">
-			<table class="table table-striped table-hover table-bordered table-responsive linePadding new-tab " ng-show="products.length>0">
+		<div class="col-sm-10 container" style="overflow-x: auto">
+			<table class="table table-striped table-hover table-bordered table-responsive linePadding new-tab " style="margin-left: 10px;" ng-show="products.length>0">
 				<thead>
 				<tr>
 					<th class="centerAlign">Product Image</th>
@@ -64,8 +64,8 @@
 						<img class="centeredImg" ng-src="{{product.image}}" alt="Image unavailable">
 					</td> -->
 					<td width="10%" class="prdtimg">
-						<div style="margin: 0 auto; width: 130px">
-							<img class="centeredImg pro-img" ng-src="{{product.image}}" alt="Image unavailable" style="width: 130px">
+						<div style="margin: 0 auto; width: 110px">
+							<img class="centeredImg pro-img" ng-src="{{product.image}}" alt="Image unavailable" style="width: 120px">
 						</div>
 					</td>
 					<td width="60%"><a href="#/viewDetails/{{product.sku}}">
