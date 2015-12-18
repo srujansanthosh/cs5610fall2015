@@ -104,13 +104,13 @@
             
             <tbody>
                 <tr ng-repeat="product in reviewedProducts">
-                    <td width="40%">
+                    <td width="30%">
                     	<span class="reviewImg"><img class="centeredImg" ng-src="{{product.image}}" alt="Image currently unavailable"> </span>
                         <a href="#/viewDetails/{{product.sku}}"> <h4><b>{{product.name}}</b></h4> </a>
                         <p><b>Product Id: </b>{{product.sku}}</p>
-                        <p><b>Short Description:</b> {{product.shortDescription}}</p>
+                        <!--<p><b>Short Description:</b> {{product.shortDescription}}</p>-->
                     </td>
-                    <td width="30%">
+                    <td width="50%">
                         <h4>{{product.userReview.title}}</h4>
                         <h6>{{product.userReview.comment}}</h6>
                         My rating : <span>{{product.userReview.rating}} out of 5</span>
